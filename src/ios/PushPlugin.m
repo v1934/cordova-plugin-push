@@ -163,9 +163,9 @@
         }];
     } else {
         NSLog(@"Push Plugin VoIP missing or false");
-        // [[NSNotificationCenter defaultCenter]
-        //  addObserver:self selector:@selector(onTokenRefresh)
-        //  name:kFIRInstanceIDTokenRefreshNotification object:nil];
+        [[NSNotificationCenter defaultCenter]
+          addObserver:self selector:@selector(onTokenRefresh)
+          name:FIRMessagingRegistrationTokenRefreshedNotification object:nil];
 
         [self.commandDelegate runInBackground:^ {
             NSLog(@"Push Plugin register called");
