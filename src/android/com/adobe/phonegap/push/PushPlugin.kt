@@ -898,9 +898,8 @@ class PushPlugin : CordovaPlugin() {
       FirebaseMessaging.getInstance().unsubscribeFromTopic(it)
     }
   }
-}
 
-override fun onRequestPermissionResult(
+  override fun onRequestPermissionResult(
     requestCode: Int,
     permissions: Array<out String>?,
     grantResults: IntArray?
@@ -923,4 +922,5 @@ override fun onRequestPermissionResult(
     {
       executeActionInitialize(pluginInitData!!, pushContext!!)
     }
+  }
 }
